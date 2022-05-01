@@ -11,19 +11,23 @@ body{
 
 /* Nav */
 
+.quarantine{
+    text-align: center;
+    color: #d4bf97;
+    letter-spacing: 3px;
+    font-weight: bolder;
+    font-size: 25px;
+    cursor:default;
+}
+.navdiv{
+    background-color: black;
+}
 .navbar{
     background-color: rgb(0, 0, 0);
     padding: 20px 100px;
     font-size: 20px;
     font-weight: bolder;
     position: sticky;
-}
-.navbar-brand{
-    color: #d4bf97;
-    letter-spacing: 3px;
-    font-weight: bolder;
-    font-size: 25px;
-    cursor:default
 }
 .nav-link{
     color: #d4bf97;
@@ -32,6 +36,7 @@ body{
 .fa-solid{
     color: #d4bf97;
     background-color: black;
+    text-align: center;
 }  
 .nav-item a{
     color: #d4bf97;
@@ -108,13 +113,14 @@ body{
     margin: 70px auto;
 }
 .disco2{
-    margin: 70px 20px 70px 0px;
+    margin: 0px 0px 0px 0px;
+    padding: 70px 0 70px 0;
     text-align: center;
 }
 .disco img:hover{
     border: solid white 2px;
 }
-button a{
+.btn a{
     text-decoration: none;
 }
 .btn a h4{
@@ -151,15 +157,17 @@ a:hover{
     padding: 30px 0 10px 0;
 }
 .footer-logos i{
-    margin: 0 20px;
+    margin: 0 30px;
     color: black
 }
 .footer-logos{
     text-align: center;
+    margin: 10px 0 10px 0
 }
 .footer-copyright{
     color: black;
     text-align: center;
+    margin: 10px 0 10px 0;
 }
 .float-right{
     text-align: center;
@@ -170,6 +178,15 @@ a:hover{
 }
 .float-right a:hover{
     color:white
+}
+.btn-footer a:hover{
+    color:#d4bf97
+}
+.btn a h6:hover{
+    color:#d4bf97
+}
+.btn a h6{
+    padding: 5px 0 0 0
 }
 
 /* historia */
@@ -196,11 +213,12 @@ a:hover{
 }
 .galeria-disco{
     transition: all 400ms;
-    padding: 10px
+    padding: 10px;
+    align-items: center;
 }
 .galeria-disco img{
     max-width: 300px;
-    margin: 0 70px 70px 70px
+    margin: 0 70px 70px 70px;
 }
 .galeria-disco:hover{
     transform: scale(1.05);
