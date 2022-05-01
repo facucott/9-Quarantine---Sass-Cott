@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'varta', sans-serif;
+}
+
+body{
+    max-width: 100%;
+}
+
+/* Nav */
+
+.navbar{
+    background-color: rgb(0, 0, 0);
+    padding: 20px 100px;
+    font-size: 20px;
+    font-weight: bolder;
+    position: sticky;
+}
+.navbar-brand{
+    color: #d4bf97;
+    letter-spacing: 3px;
+    font-weight: bolder;
+    font-size: 25px;
+    cursor:default
+}
+.nav-link{
+    color: #d4bf97;
+    font-size: 20px;
+}
+.fa-solid{
+    color: #d4bf97;
+    background-color: black;
+}  
+.nav-item a{
+    color: #d4bf97;
+    text-decoration: none;
+    margin: 0 20px 0 20px;
+}
+
+/* NAV ANIMADO */
+
+.nav-item a{
+    text-decoration: none;
+    color:  #d4bf97;
+    position: relative;
+    /* padding: 0 0 5px 0; */
+}
+.nav-item a:hover{
+    color: rgb(255, 255, 255);
+}
+
+.nav-item a::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: white;
+    transition: width 0.3s ease-out;
+}
+
+.nav-item a:hover::before{
+    width:100%
+}
+
+/* LINK ACTIVE */
+
+.navbar ul li a.linkActive{
+    color: white;
+/* border-bottom: solid #d4bf97; */
+/* line-height: 15px; */
+}
+
+/* Carrousel */
+
+.carousel-item{
+    padding: 0 100px;
+}
+.carousel-item img{
+    border-radius: 50px;
+}
+.carro{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+.carousel{
+    width: 800px;
+    padding: 0 0 70px 0;
+}
+
+/* Portada */
+
+.portada{
+    padding: 50px;
+}
+.portada img{
+    border-radius: 10px;
+}
+
+/* Disco */
+
+.disco{
+    max-width: 450px;
+    margin: 70px auto;
+}
+.disco2{
+    margin: 70px 20px 70px 0px;
+    text-align: center;
+}
+.disco img:hover{
+    border: solid white 2px;
+}
+button a{
+    text-decoration: none;
+}
+.btn a h4{
+    padding: 5px 0 0 0
+}
+button a h4:hover{
+    color:#d4bf97;
+}
+.btn:hover{
+    background-color: black;
+}
+
+/* Video */
+
+.video{
+    padding: 70px 100px 70px 100px;
+}
+.video2{
+    margin: 0px 0px 70px 0px;
+    padding: 70px 0 0 0;
+    text-align: center;
+}
+.video2 a{
+    color:#d4bf97;
+    text-decoration: none;
+}
+a:hover{
+    color: white;
+}
+
+/* Footer */
+
+.footer{
+    padding: 30px 0 10px 0;
+}
+.footer-logos i{
+    margin: 0 20px;
+    color: black
+}
+.footer-logos{
+    text-align: center;
+}
+.footer-copyright{
+    color: black;
+    text-align: center;
+}
+.float-right{
+    text-align: center;
+}
+.float-right a{
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+}
+.float-right a:hover{
+    color:white
+}
+
+/* historia */
+
+.historia{
+    padding: 50px;
+    color:#d4bf97; 
+}
+.historia h3{
+    border-bottom: #d4bf97 solid 2px;
+}
+#frases{
+    text-align: center;
+    padding: 0 100px;
+}
+
+/* música */
+
+.titulo{
+    color: #d4bf97;
+    background-color: black;
+    text-align: center;
+    padding: 10px 50px 20px 50px;
+}
+.galeria-disco{
+    transition: all 400ms;
+    padding: 10px
+}
+.galeria-disco img{
+    max-width: 300px;
+    margin: 0 70px 70px 70px
+}
+.galeria-disco:hover{
+    transform: scale(1.05);
+}
