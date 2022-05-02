@@ -111,10 +111,11 @@ body{
 .disco{
     max-width: 450px;
     margin: 70px auto;
+    padding: 0 20px
 }
 .disco2{
     margin: 0px 0px 0px 0px;
-    padding: 70px 0 70px 0;
+    padding: 70px 50px 70px 50px;
     text-align: center;
 }
 .disco img:hover{
@@ -136,11 +137,11 @@ button a h4:hover{
 /* Video */
 
 .video{
-    padding: 70px 100px 70px 100px;
+    padding: 70px 50px 70px 50px;
 }
 .video2{
     margin: 0px 0px 70px 0px;
-    padding: 70px 0 0 0;
+    padding: 70px 50px 0 50px;
     text-align: center;
 }
 .video2 a{
@@ -200,7 +201,7 @@ a:hover{
 }
 #frases{
     text-align: center;
-    padding: 0 100px;
+    padding: 0 0px;
 }
 
 /* música */
@@ -218,7 +219,7 @@ a:hover{
 }
 .galeria-disco img{
     max-width: 300px;
-    margin: 0 70px 70px 70px;
+    margin: 0 0px 70px 0px;
 }
 .galeria-disco:hover{
     transform: scale(1.05);
