@@ -13,42 +13,51 @@
 </head>
 <body>
 
-  <!-- navbar inicio -->
+  <!-- header inicio -->
 
-  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-    <div class="container-fluid d-flex flex-row-reverse justify-content-between">
-
-      <div class="quarantine">T3OQ</div>
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fa-solid fa-bars"></i>
-        <!-- <span class="navbar-toggler-icon"></span> -->
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a href="../index.html">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a href="../pages/nosotros.html">Nosotros</a>
-          </li>
-          <li class="nav-item">
-            <a href="../pages/musica.html" class="linkActive">Música</a>
-          </li>
-          <li class="nav-item">
-            <a href="../pages/galeria.html">Galería</a>
-          </li>
-          <li class="nav-item">
-            <a href="../pages/contacto.html">Contacto</a>
-          </li>
+  <header class="header">
+    <h1>T3OQ</h1>
+    <label for="menu-button" class="check"><i class="fa-solid fa-bars"></i></label>
+    <input type="checkbox" id="menu-button">
+    <nav class="nav">
+        <ul class="nav-item">
+            <li><a href="../index.html" class="linkActive">Inicio</a></li>
+            <li><a href="../pages/nosotros.html">Nosotros</a></li>
+            <li><a href="../pages/musica.html">Música</a></li>
+            <li><a href="../pages/galeria.html">Galería</a></li>
+            <li><a href="../pages/fechas.html">Fechas</a></li>
+            <li><a href="../pages/contacto.html">Contacto</a></li>
+            <li> <button type="button" class="btn btn-primary boton-ticket nav-item" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: #000000;"><i class="fa-solid fa-ticket"></i></button></li>
         </ul>
+    </nav>
+  </header>
+
+  <!-- header fin -->
+
+    <!-- Modal inicio -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+      <div class="modal-content" style="background-color: #000000;">
+          <div class="modal-header" style="color:#d4bf97;">
+          <h5 class="modal-title" id="exampleModalLabel">Sacá tus entradas para el próximo Show!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+      <div class="modal-body" style="color:#d4bf97;">
+          <p>The Three Of Quarantine en "La Dama De Bollini"<br>
+          <br> 24 de mayo, 22 hrs.-
+          <br> Pje. Bollini 2281, Palermo.
+          </p>
+          </div>
+          <div class="modal-footer" style="color:#d4bf97;">
+          <button type="button" class="boton-modal" data-bs-dismiss="modal"><a href="https://alpogo.com/evento/245-la-dama-de-bollini-6925" target="__blank">Alpogo.com</a></button>
+          </div>
       </div>
+      </div>
+  </div>
 
-    </div>
-  </nav>
-
-  <!-- navbar fin -->
+  <!-- Modal fin -->
 
   <!-- discos galeria inicio -->
   
@@ -138,9 +147,7 @@
           </div>
 
     <div class="float-right col-mb-4">
-      <p> 
-        <button type="button" class="btn btn-outline-dark"><a href="#" style="color: #000000;"><h6> Subir</h6></a></button>
-      </p>
+      <h6 class="boton-subir"><a href="#" target="__blank">Subir</a></h6>
     </div>
       
       </div>

@@ -9,29 +9,112 @@ body{
     max-width: 100%;
 }
 
-/* Nav */
+/* MODAL */
 
-.quarantine{
-    text-align: center;
-    color: #d4bf97;
-    letter-spacing: 3px;
-    font-weight: bolder;
-    font-size: 25px;
-    cursor:default;
+.modal-content{
+    border: solid 1px #d4bf97
 }
-.navdiv{
+.boton-ticket{
+    padding: 2px;
+    border: none;
+    text-decoration: none;
+}
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+.boton-ticket i:hover{
+    color: white;
+}
+.fa-solid{
     background-color: black;
 }
-.navbar{
-    background-color: rgb(0, 0, 0);
-    padding: 20px 100px;
-    font-size: 20px;
-    font-weight: bolder;
-    position: sticky;
-}
-.nav-link{
+.boton-modal a{
+    text-decoration: none;
     color: #d4bf97;
-    font-size: 20px;
+}
+.boton-modal:hover{
+    background-color: #d4bf97;
+    color:rgb(0, 0, 0)
+}
+.boton-modal a:hover{
+    color: black
+}
+.boton-modal{
+    background-color: black;
+    border: 1px solid #d4bf97;
+    padding: 10px
+}
+.modal-body{
+    text-align: center;
+    padding: 20px 0 0 0
+}
+
+/* SCROLL BAR */
+
+::-webkit-scrollbar-track{
+    background-color: black;
+    border-radius:10px
+}
+::-webkit-scrollbar{
+    background-color: black;
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #d4bf97;
+    border-radius: 10px;
+    border: solid 2px black;
+}
+
+/* HEADER */
+
+.header{
+    background-color: rgb(0, 0, 0);
+    display: grid;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    width: 100%;
+    padding: 20px 100px;
+    position: sticky;
+    top:0;
+    z-index: 10;
+
+    grid-template-areas:
+    "nav nombreBanda";
+}
+.nav{
+    grid-area: nav;
+}
+.nombreBanda{
+    grid-area: nombreBanda;
+}
+
+.header h1{
+    color:  #d4bf97;
+    letter-spacing: 2px;
+    font-size: 25px;
+    font-weight: bolder;
+    margin: auto 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* NAV */
+
+.nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1rem;
+}
+.nav ul li{
+    list-style: none;
+    font-size:large;
+    font-weight: 600;
+}
+.nav ul li a{
+    text-decoration: none;
+    color:#d4bf97
 }
 .fa-solid{
     color: #d4bf97;
@@ -46,17 +129,15 @@ body{
 
 /* NAV ANIMADO */
 
-.nav-item a{
+.nav-item a, .boton-ticket{
     text-decoration: none;
     color:  #d4bf97;
     position: relative;
-    /* padding: 0 0 5px 0; */
 }
-.nav-item a:hover{
+.nav-item a:hover, .boton-ticket:hover{
     color: rgb(255, 255, 255);
 }
-
-.nav-item a::before{
+.nav-item a::before, .boton-ticket::before{
     content: "";
     position: absolute;
     left: 0;
@@ -66,8 +147,7 @@ body{
     background-color: white;
     transition: width 0.3s ease-out;
 }
-
-.nav-item a:hover::before{
+.nav-item a:hover::before, .boton-ticket:hover::before{
     width:100%
 }
 
@@ -75,24 +155,39 @@ body{
 
 .navbar ul li a.linkActive{
     color: white;
-/* border-bottom: solid #d4bf97; */
-/* line-height: 15px; */
+}
+
+/* MENÚ */
+#menu-button{
+    display: none;
+}
+.check{
+    display: none;
+}
+header label{
+    padding: 15px;
+    width: 30px;
+    color: #d4bf97;
+}
+header label:hover{
+    cursor: pointer;
 }
 
 /* Carrousel */
 
 .carousel-item{
-    padding: 0 100px;
+    padding: 50px 100px 80px 100px;
 }
 .carousel-item img{
     border-radius: 50px;
 }
 .carro{
     background-color: black;
+    padding: 0 0 30px 0;
 }
 .carousel{
     width: 800px;
-    padding: 0 0 70px 0;
+    padding: 0 0 0px 0;
 }
 
 /* Portada */
@@ -109,7 +204,7 @@ body{
 .disco{
     max-width: 450px;
     margin: 70px auto;
-    padding: 0 20px
+    padding: 0 50px
 }
 .disco2{
     margin: 0px 0px 0px 0px;
@@ -130,6 +225,16 @@ button a h4:hover{
 }
 .btn:hover{
     background-color: black;
+}
+.boton-escuchar a, .boton-subir a{
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    border: 1px solid black;
+}
+.boton-escuchar a:hover, .boton-subir a:hover{
+    background-color: black;
+    color: #d4bf97;
 }
 
 /* Video */
@@ -153,7 +258,7 @@ a:hover{
 /* Footer */
 
 .footer{
-    padding: 30px 0 10px 0;
+    padding: 30px 0 20px 0;
 }
 .footer-logos i{
     margin: 0 30px;
@@ -170,6 +275,7 @@ a:hover{
 }
 .float-right{
     text-align: center;
+    padding: 10px 0;
 }
 .float-right a{
     text-decoration: none;
@@ -177,15 +283,6 @@ a:hover{
 }
 .float-right a:hover{
     color:white
-}
-.btn-footer a:hover{
-    color:#d4bf97
-}
-.btn a h6:hover{
-    color:#d4bf97
-}
-.btn a h6{
-    padding: 5px 0 0 0
 }
 
 /* historia */
@@ -210,14 +307,17 @@ a:hover{
     text-align: center;
     padding: 10px 50px 20px 50px;
 }
+.galeria-discos{
+    padding: 0 0 30px 0;
+}
 .galeria-disco{
     transition: all 400ms;
-    padding: 10px;
+    padding: 20px 0 30px 0;
     align-items: center;
 }
 .galeria-disco img{
     max-width: 300px;
-    margin: 0 0px 70px 0px;
+    /* margin: 0 0px 30px 0px; */
 }
 .galeria-disco:hover{
     transform: scale(1.05);
@@ -243,6 +343,26 @@ a:hover{
 }
 .galeria-imagenes img:hover{
     transform: scale(1.05);
+}
+
+/* fechas */
+
+.fechas{
+    background-color: black;
+    color: #d4bf97;
+    padding: 50px 50px 50px 50px;
+}
+.hr{
+    margin: 50px 0 50px 0
+}
+.fechas-2021-eter a, .fechas-2022-dama a{
+    color:#d4bf97;
+    text-decoration: none;
+}
+
+.fechas-2021-eter a:hover, .fechas-2022-dama a:hover{
+    text-decoration: none;
+    color: white;
 }
 
 /* formulario */
@@ -299,4 +419,77 @@ a:hover{
 .form__input--submit:hover{
     background-color:#d4bf97;
     color:black;
+}
+
+
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 1024px){
+
+    /* HEADER */
+
+    .header{
+        display: grid;
+        grid-template-areas:
+        "label nombreBanda";
+    }
+    label{
+        grid-area: label;
+    }
+    .nombreBanda{
+        grid-area: nombreBanda;
+    }
+    .header h1{
+        padding-top: 4px;
+    }
+
+    /* BOTON DE MENU */
+
+    .header label{
+        margin: 10px;
+    }
+    #menu-button:checked ~ ul{
+        right: 0;
+    }
+    .check{
+        display: flex;
+    }
+
+    /* NAV */
+
+    .nav{
+        position: fixed;
+        background-color: black;
+        width: 30%;
+        top: 80px;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        left: -100%;
+        transition: all 0.8s;
+    }
+
+    .nav ul{
+        flex-direction: column;
+        position: fixed;
+    }
+
+    .nav ul li{
+        line-height: 50px;
+    }
+
+    .nav ul li a{
+        font-size: 20px;
+    }
+
+    #menu-button:checked ~ nav{
+        left: 0
+    }
+
 }
