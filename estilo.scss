@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Varta:wght@400;700&display=swap');
+
+// VARIABLE: FUENTE
+
+$font: 'Varta', sans-serif;
+
+// VARIABLE: COLOR
+
+$color1: black;
+$color2: white;
+$color3: #d4bf97;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font;
+}
+
+body{
+    max-width: 100%;
+}
+
+// SCROLL BAR
+
+// MIXIN
+
+@mixin scrollbar ($b-color, $width, $border){
+    background-color: $b-color;
+    width: $width;
+    border: $border;
+}
+
+::-webkit-scrollbar-track{
+    @include scrollbar($color1, 100% , none)
+}
+::-webkit-scrollbar{
+    @include scrollbar($color1, 12px , none)
+}
+::-webkit-scrollbar-thumb{
+    @include scrollbar($color3, 100% , solid 2px $color1)
+}
+
+@import "_header";
+
+// CARROUSEL
+
+.carousel-item{
+    padding: 50px 100px 80px 100px;
+
+    img{
+        border-radius: 50px;
+    }
+}
+.carro{
+    background-color: $color1;
+    padding: 0 0 30px 0;
+}
+.carousel{
+    width: 800px;
+    padding: 0 0 0px 0;
+}
+
+// PORTADA
+
+.portada{
+    padding: 50px;
+
+    img{
+        border-radius: 10px;
+    }
+}
+
+// DISCO
+
+.disco{
+    max-width: 450px;
+    margin: 70px auto;
+    padding: 0 50px;
+
+    img{
+        &:hover{border: solid $color2 2px}
+    }
+}
+.disco2{
+    margin: 0px 0px 0px 0px;
+    padding: 70px 50px 70px 50px;
+    text-align: center;
+}
+.btn{ 
+    a{
+        text-decoration: none;
+    }
+    a h4{
+        padding: 5px 0 0 0;
+        &:hover{color:$color3}
+    }
+    &:hover{
+        background-color: $color1
+    }
+}
+.boton-escuchar a, .boton-subir a{
+    color: $color1;
+    text-decoration: none;
+    padding: 10px;
+    border: 1px solid $color1;
+    &:hover{
+        background-color: $color1;
+        color: $color3;
+    }
+}
+
+// VIDEO
+
+.video{
+    padding: 70px 50px 70px 50px;
+}
+.video2{
+    margin: 0px 0px 70px 0px;
+    padding: 70px 50px 0 50px;
+    text-align: center;
+
+    a{
+        color:$color3;
+        text-decoration: none;
+        &:hover{color: $color2}
+    }
+}
+
+@import "_footer";
+
+// HISTORIA
+
+.historia{
+    padding: 50px;
+    color:$color3; 
+
+    h3{
+        border-bottom: $color3 solid 2px;
+    }
+}
+
+#frases{
+    text-align: center;
+    padding: 0 0px;
+}
+
+// MÚSICA
+
+.titulo{
+    color: $color3;
+    background-color: $color1;
+    text-align: center;
+    padding: 10px 50px 20px 50px;
+}
+.galeria-discos{
+    padding: 0 0 30px 0;
+}
+.galeria-disco{
+    transition: all 400ms;
+    padding: 20px 0 30px 0;
+    align-items: center;
+    
+
+    img{
+        max-width: 300px;
+        &:hover{border: solid 2px $color1};
+    }
+}
+
+// GALERÍA
+
+.galeria-imagenes{
+    align-items: center;
+    
+    img{
+        max-width: 320px;
+        margin: 10px;
+        padding: 10px;
+        transition: all 400ms;
+        &:hover{transform: scale(1.05)}
+    }
+}
+.galeria-img{
+    padding: 0 70px 30px 70px
+}
+
+// FECHAS
+
+.fechas{
+    background-color: $color1;
+    color: $color3;
+    padding: 50px 50px 50px 50px;
+}
+.hr{
+    margin: 50px 0 50px 0
+}
+.fechas-2021-eter a, .fechas-2022-dama a{
+    color: $color3;
+    text-decoration: none;
+
+    &:hover{
+        text-decoration: none;
+        color: $color2;
+    }
+}
+
+// FORMULARIO
+
+.formulario1{
+    color: $color3;
+    text-align: center;
+    align-items: center;
+    padding: 0 0 30px 0
+}
+.form{
+    padding: 40px 0;
+    font-size: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    align-content: center;
+}
+.form__label{
+    text-align: center;
+}
+.form__input{
+    margin: 10px;
+    width: 300px;
+    padding: 10px;
+    font-family: varta;
+    border: none;
+    border-bottom: 2px solid $color3;
+    background-color: $color1;
+    color: $color2;
+    align-content: center;
+}
+.form__textarea{
+    @extend .form__input;
+    resize: none;
+}
+.form__input:focus, .form__textarea:focus{
+    outline: none;
+}
+.form__input--submit{
+    border: 2px solid $color3;
+    background-color: $color1;
+    color: $color3;
+    font-size: 20px;
+    padding: 10px;
+    width: 300px;
+    align-items: center;
+    margin-top: 30px;
+    margin: 10px;
+    cursor: pointer
+}
+.form__input--submit:hover{
+    background-color: $color3;
+    color: $color1;
+}
+
+// MEDIA QUERIES
+
+@media only screen and (max-width: 1224px){
+
+    // HEADER
+
+    .header{
+        padding: 10px 20px;
+        display: grid;
+        grid-template-areas:
+        "label nombreBanda";
+
+        h1{
+            padding-top: 4px;
+            padding-right: 20px;
+        }
+
+        label{
+            margin:10px
+        }
+    }
+    label{
+        grid-area: label;
+    }
+    .nombreBanda{
+        grid-area: nombreBanda;
+    }
+
+    // BOTÓN DE MENÚ
+
+    #menu-button:checked ~ ul{
+        right: 0;
+    }
+    .check{
+        display: flex;
+    }
+
+    // NAV
+
+    .nav{
+        position: fixed;
+        background-color: $color1;
+        top: 80px;
+        width: 50%;
+        left: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        left: -100%;
+        transition: all 0.8s;
+
+        ul{
+            flex-direction: column;
+            position: fixed;
+        }
+
+        ul li{
+            line-height: 50px;
+        }
+
+        ul li a{
+            font-size: 20px;
+        }
+    }
+
+    #menu-button:checked ~ nav{
+        left: 0
+    }
+
+}

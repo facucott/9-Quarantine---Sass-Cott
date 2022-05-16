@@ -1,495 +1,480 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'varta', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Varta:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Varta", sans-serif;
 }
 
-body{
-    max-width: 100%;
+body {
+  max-width: 100%;
 }
 
-/* MODAL */
+::-webkit-scrollbar-track {
+  background-color: black;
+  width: 100%;
+  border: none;
+}
 
-.modal-content{
-    border: solid 1px #d4bf97
+::-webkit-scrollbar {
+  background-color: black;
+  width: 12px;
+  border: none;
 }
-.boton-ticket{
-    padding: 2px;
-    border: none;
-    text-decoration: none;
+
+::-webkit-scrollbar-thumb {
+  background-color: #d4bf97;
+  width: 100%;
+  border: solid 2px black;
 }
+
+.header {
+  background-color: black;
+  display: grid;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  width: 100%;
+  padding: 20px 100px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  grid-template-areas: "nav nombreBanda";
+}
+.header h1 {
+  color: #d4bf97;
+  letter-spacing: 2px;
+  font-size: 25px;
+  font-weight: bolder;
+  margin: auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 100px 0 0;
+}
+
+.nav {
+  grid-area: nav;
+}
+.nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem;
+  align-items: center;
+}
+.nav ul li {
+  list-style: none;
+  font-size: large;
+  font-weight: 600;
+  font-size: 20px;
+}
+.nav ul li a {
+  text-decoration: none;
+  color: #d4bf97;
+}
+
+.nombreBanda {
+  grid-area: nombreBanda;
+}
+
+.fa-solid {
+  color: #d4bf97;
+  background-color: black;
+  text-align: center;
+}
+
+.nav-item a {
+  color: #d4bf97;
+  text-decoration: none;
+  margin: 0 20px 0 20px;
+  text-decoration: none;
+  color: #d4bf97;
+  position: relative;
+}
+.nav-item a:hover {
+  color: white;
+}
+.nav-item a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background-color: white;
+  transition: width 0.3s ease-out;
+}
+.nav-item a:hover::before {
+  width: 100%;
+}
+
+.navbar ul li a.linkActive {
+  color: white;
+}
+
+#menu-button {
+  display: none;
+}
+
+.check {
+  display: none;
+}
+
+header label {
+  padding: 15px;
+  width: 30px;
+  color: #d4bf97;
+}
+header label:hover {
+  cursor: pointer;
+}
+
+.modal-content {
+  border: solid 1px #d4bf97;
+}
+
+.boton-ticket {
+  border: none;
+  text-decoration: none;
+}
+.boton-ticket i:hover {
+  color: white;
+}
+
+.fa-ticket {
+  font-size: 30px;
+}
+
 .btn:focus {
-    outline: none;
-    box-shadow: none;
-}
-.boton-ticket i:hover{
-    color: white;
-}
-.fa-solid{
-    background-color: black;
-}
-.boton-modal a{
-    text-decoration: none;
-    color: #d4bf97;
-}
-.boton-modal:hover{
-    background-color: #d4bf97;
-    color:rgb(0, 0, 0)
-}
-.boton-modal a:hover{
-    color: black
-}
-.boton-modal{
-    background-color: black;
-    border: 1px solid #d4bf97;
-    padding: 10px
-}
-.modal-body{
-    text-align: center;
-    padding: 20px 0 0 0
+  outline: none;
+  box-shadow: none;
 }
 
-/* SCROLL BAR */
-
-::-webkit-scrollbar-track{
-    background-color: black;
-    border-radius:10px
+.boton-modal {
+  background-color: black;
+  border: 1px solid #d4bf97;
+  padding: 10px;
 }
-::-webkit-scrollbar{
-    background-color: black;
-    width: 10px;
+.boton-modal a {
+  text-decoration: none;
+  color: #d4bf97;
 }
-::-webkit-scrollbar-thumb{
-    background-color: #d4bf97;
-    border-radius: 10px;
-    border: solid 2px black;
+.boton-modal a:hover {
+  color: black;
+}
+.boton-modal:hover {
+  background-color: #d4bf97;
+  color: black;
 }
 
-/* HEADER */
+.modal-body {
+  text-align: center;
+  padding: 20px 0 0 0;
+}
 
-.header{
-    background-color: rgb(0, 0, 0);
+.carousel-item {
+  padding: 50px 100px 80px 100px;
+}
+.carousel-item img {
+  border-radius: 50px;
+}
+
+.carro {
+  background-color: black;
+  padding: 0 0 30px 0;
+}
+
+.carousel {
+  width: 800px;
+  padding: 0 0 0px 0;
+}
+
+.portada {
+  padding: 50px;
+}
+.portada img {
+  border-radius: 10px;
+}
+
+.disco {
+  max-width: 450px;
+  margin: 70px auto;
+  padding: 0 50px;
+}
+.disco img:hover {
+  border: solid white 2px;
+}
+
+.disco2 {
+  margin: 0px 0px 0px 0px;
+  padding: 70px 50px 70px 50px;
+  text-align: center;
+}
+
+.btn a {
+  text-decoration: none;
+}
+.btn a h4 {
+  padding: 5px 0 0 0;
+}
+.btn a h4:hover {
+  color: #d4bf97;
+}
+.btn:hover {
+  background-color: black;
+}
+
+.boton-escuchar a, .boton-subir a {
+  color: black;
+  text-decoration: none;
+  padding: 10px;
+  border: 1px solid black;
+}
+.boton-escuchar a:hover, .boton-subir a:hover {
+  background-color: black;
+  color: #d4bf97;
+}
+
+.video {
+  padding: 70px 50px 70px 50px;
+}
+
+.video2 {
+  margin: 0px 0px 70px 0px;
+  padding: 70px 50px 0 50px;
+  text-align: center;
+}
+.video2 a {
+  color: #d4bf97;
+  text-decoration: none;
+}
+.video2 a:hover {
+  color: white;
+}
+
+.footer {
+  padding: 30px 0 20px 0;
+}
+
+.footer-logos {
+  text-align: center;
+  margin: 5px 0 10px 0;
+}
+.footer-logos i {
+  margin: 0 30px;
+  font-size: 30px;
+  color: black;
+}
+
+.footer-copyright {
+  color: black;
+  text-align: center;
+  margin: 10px 0 10px 0;
+}
+
+.float-right {
+  text-align: center;
+  padding: 10px 0;
+}
+.float-right a {
+  text-decoration: none;
+  color: black;
+}
+.float-right a:hover {
+  color: white;
+}
+
+.historia {
+  padding: 50px;
+  color: #d4bf97;
+}
+.historia h3 {
+  border-bottom: #d4bf97 solid 2px;
+}
+
+#frases {
+  text-align: center;
+  padding: 0 0px;
+}
+
+.titulo {
+  color: #d4bf97;
+  background-color: black;
+  text-align: center;
+  padding: 10px 50px 20px 50px;
+}
+
+.galeria-discos {
+  padding: 0 0 30px 0;
+}
+
+.galeria-disco {
+  transition: all 400ms;
+  padding: 20px 0 30px 0;
+  align-items: center;
+}
+.galeria-disco img {
+  max-width: 300px;
+}
+.galeria-disco img:hover {
+  border: solid 2px black;
+}
+
+.galeria-imagenes {
+  align-items: center;
+}
+.galeria-imagenes img {
+  max-width: 320px;
+  margin: 10px;
+  padding: 10px;
+  transition: all 400ms;
+}
+.galeria-imagenes img:hover {
+  transform: scale(1.05);
+}
+
+.galeria-img {
+  padding: 0 70px 30px 70px;
+}
+
+.fechas {
+  background-color: black;
+  color: #d4bf97;
+  padding: 50px 50px 50px 50px;
+}
+
+.hr {
+  margin: 50px 0 50px 0;
+}
+
+.fechas-2021-eter a, .fechas-2022-dama a {
+  color: #d4bf97;
+  text-decoration: none;
+}
+.fechas-2021-eter a:hover, .fechas-2022-dama a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.formulario1 {
+  color: #d4bf97;
+  text-align: center;
+  align-items: center;
+  padding: 0 0 30px 0;
+}
+
+.form {
+  padding: 40px 0;
+  font-size: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  align-content: center;
+}
+
+.form__label {
+  text-align: center;
+}
+
+.form__input, .form__textarea {
+  margin: 10px;
+  width: 300px;
+  padding: 10px;
+  font-family: varta;
+  border: none;
+  border-bottom: 2px solid #d4bf97;
+  background-color: black;
+  color: white;
+  align-content: center;
+}
+
+.form__textarea {
+  resize: none;
+}
+
+.form__input:focus, .form__textarea:focus {
+  outline: none;
+}
+
+.form__input--submit {
+  border: 2px solid #d4bf97;
+  background-color: black;
+  color: #d4bf97;
+  font-size: 20px;
+  padding: 10px;
+  width: 300px;
+  align-items: center;
+  margin-top: 30px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.form__input--submit:hover {
+  background-color: #d4bf97;
+  color: black;
+}
+
+@media only screen and (max-width: 1224px) {
+  .header {
+    padding: 10px 20px;
     display: grid;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-    width: 100%;
-    padding: 20px 100px;
-    position: sticky;
-    top:0;
-    z-index: 10;
+    grid-template-areas: "label nombreBanda";
+  }
+  .header h1 {
+    padding-top: 4px;
+    padding-right: 20px;
+  }
+  .header label {
+    margin: 10px;
+  }
 
-    grid-template-areas:
-    "nav nombreBanda";
-}
-.nav{
-    grid-area: nav;
-}
-.nombreBanda{
+  label {
+    grid-area: label;
+  }
+
+  .nombreBanda {
     grid-area: nombreBanda;
-}
+  }
 
-.header h1{
-    color:  #d4bf97;
-    letter-spacing: 2px;
-    font-size: 25px;
-    font-weight: bolder;
-    margin: auto 0;
+  #menu-button:checked ~ ul {
+    right: 0;
+  }
+
+  .check {
     display: flex;
-    flex-wrap: wrap;
-}
+  }
 
-/* NAV */
-
-.nav ul{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin: 1rem;
-}
-.nav ul li{
-    list-style: none;
-    font-size:large;
-    font-weight: 600;
-}
-.nav ul li a{
-    text-decoration: none;
-    color:#d4bf97
-}
-.fa-solid{
-    color: #d4bf97;
+  .nav {
+    position: fixed;
     background-color: black;
-    text-align: center;
-}  
-.nav-item a{
-    color: #d4bf97;
-    text-decoration: none;
-    margin: 0 20px 0 20px;
-}
-
-/* NAV ANIMADO */
-
-.nav-item a, .boton-ticket{
-    text-decoration: none;
-    color:  #d4bf97;
-    position: relative;
-}
-.nav-item a:hover, .boton-ticket:hover{
-    color: rgb(255, 255, 255);
-}
-.nav-item a::before, .boton-ticket::before{
-    content: "";
-    position: absolute;
+    top: 80px;
+    width: 50%;
     left: 0;
     bottom: 0;
-    width: 0;
-    height: 3px;
-    background-color: white;
-    transition: width 0.3s ease-out;
-}
-.nav-item a:hover::before, .boton-ticket:hover::before{
-    width:100%
-}
-
-/* LINK ACTIVE */
-
-.navbar ul li a.linkActive{
-    color: white;
-}
-
-/* MENÚ */
-#menu-button{
-    display: none;
-}
-.check{
-    display: none;
-}
-header label{
-    padding: 15px;
-    width: 30px;
-    color: #d4bf97;
-}
-header label:hover{
-    cursor: pointer;
-}
-
-/* Carrousel */
-
-.carousel-item{
-    padding: 50px 100px 80px 100px;
-}
-.carousel-item img{
-    border-radius: 50px;
-}
-.carro{
-    background-color: black;
-    padding: 0 0 30px 0;
-}
-.carousel{
-    width: 800px;
-    padding: 0 0 0px 0;
-}
-
-/* Portada */
-
-.portada{
-    padding: 50px;
-}
-.portada img{
-    border-radius: 10px;
-}
-
-/* Disco */
-
-.disco{
-    max-width: 450px;
-    margin: 70px auto;
-    padding: 0 50px
-}
-.disco2{
-    margin: 0px 0px 0px 0px;
-    padding: 70px 50px 70px 50px;
-    text-align: center;
-}
-.disco img:hover{
-    border: solid white 2px;
-}
-.btn a{
-    text-decoration: none;
-}
-.btn a h4{
-    padding: 5px 0 0 0
-}
-button a h4:hover{
-    color:#d4bf97;
-}
-.btn:hover{
-    background-color: black;
-}
-.boton-escuchar a, .boton-subir a{
-    color: black;
-    text-decoration: none;
-    padding: 10px;
-    border: 1px solid black;
-}
-.boton-escuchar a:hover, .boton-subir a:hover{
-    background-color: black;
-    color: #d4bf97;
-}
-
-/* Video */
-
-.video{
-    padding: 70px 50px 70px 50px;
-}
-.video2{
-    margin: 0px 0px 70px 0px;
-    padding: 70px 50px 0 50px;
-    text-align: center;
-}
-.video2 a{
-    color:#d4bf97;
-    text-decoration: none;
-}
-a:hover{
-    color: white;
-}
-
-/* Footer */
-
-.footer{
-    padding: 30px 0 20px 0;
-}
-.footer-logos i{
-    margin: 0 30px;
-    color: black
-}
-.footer-logos{
-    text-align: center;
-    margin: 10px 0 10px 0
-}
-.footer-copyright{
-    color: black;
-    text-align: center;
-    margin: 10px 0 10px 0;
-}
-.float-right{
-    text-align: center;
-    padding: 10px 0;
-}
-.float-right a{
-    text-decoration: none;
-    color:rgb(0, 0, 0);
-}
-.float-right a:hover{
-    color:white
-}
-
-/* historia */
-
-.historia{
-    padding: 50px;
-    color:#d4bf97; 
-}
-.historia h3{
-    border-bottom: #d4bf97 solid 2px;
-}
-#frases{
-    text-align: center;
-    padding: 0 0px;
-}
-
-/* música */
-
-.titulo{
-    color: #d4bf97;
-    background-color: black;
-    text-align: center;
-    padding: 10px 50px 20px 50px;
-}
-.galeria-discos{
-    padding: 0 0 30px 0;
-}
-.galeria-disco{
-    transition: all 400ms;
-    padding: 20px 0 30px 0;
-    align-items: center;
-}
-.galeria-disco img{
-    max-width: 300px;
-    /* margin: 0 0px 30px 0px; */
-}
-.galeria-disco:hover{
-    transform: scale(1.05);
-}
-
-/* galería */
-
-.galeria-imagenes{
-    align-items: center;
-}
-.galeria-imagenes img{
-    max-width: 320px;
-    margin: 10px;
-    padding: 30px;
-}
-.galeria-img{
-    padding: 0 70px 30px 70px
-}
-.galeria-imagenes img{
-    padding: 10px;
-    margin: 10px;
-    transition: all 400ms;
-}
-.galeria-imagenes img:hover{
-    transform: scale(1.05);
-}
-
-/* fechas */
-
-.fechas{
-    background-color: black;
-    color: #d4bf97;
-    padding: 50px 50px 50px 50px;
-}
-.hr{
-    margin: 50px 0 50px 0
-}
-.fechas-2021-eter a, .fechas-2022-dama a{
-    color:#d4bf97;
-    text-decoration: none;
-}
-
-.fechas-2021-eter a:hover, .fechas-2022-dama a:hover{
-    text-decoration: none;
-    color: white;
-}
-
-/* formulario */
-
-.formulario1{
-    color:#d4bf97;
-    text-align: center;
-    align-items: center;
-    padding: 0 0 30px 0
-}
-.form{
-    padding: 40px 0;
-    font-size: 20px;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    justify-items: center;
     text-align: center;
-    align-content: center;
-}
-.form__label{
-    text-align: center;
-}
-.form__input, .form__textarea{
-    margin: 10px;
-    width: 300px;
-    padding: 10px;
-    font-family: varta;
-    border: none;
-    border-bottom: 2px solid #d4bf97;
-    background-color: black;
-    color: white;
-    align-content: center;
-}
-.form__textarea{
-    resize: none;
-}
-.form__input:focus, .form__textarea:focus{
-    outline: none;
-}
-.form__input--submit{
-    border: 2px solid #d4bf97;
-    background-color:rgb(0, 0, 0);
-    color:#d4bf97;
+    left: -100%;
+    transition: all 0.8s;
+  }
+  .nav ul {
+    flex-direction: column;
+    position: fixed;
+  }
+  .nav ul li {
+    line-height: 50px;
+  }
+  .nav ul li a {
     font-size: 20px;
-    padding: 10px;
-    width: 300px;
-    align-items: center;
-    margin-top: 30px;
-    margin: 10px;
-    cursor: pointer
-}
-.form__input--submit:hover{
-    background-color:#d4bf97;
-    color:black;
+  }
+
+  #menu-button:checked ~ nav {
+    left: 0;
+  }
 }
 
-
-
-/* MEDIA QUERIES */
-
-@media only screen and (max-width: 1024px){
-
-    /* HEADER */
-
-    .header{
-        display: grid;
-        grid-template-areas:
-        "label nombreBanda";
-    }
-    label{
-        grid-area: label;
-    }
-    .nombreBanda{
-        grid-area: nombreBanda;
-    }
-    .header h1{
-        padding-top: 4px;
-    }
-
-    /* BOTON DE MENU */
-
-    .header label{
-        margin: 10px;
-    }
-    #menu-button:checked ~ ul{
-        right: 0;
-    }
-    .check{
-        display: flex;
-    }
-
-    /* NAV */
-
-    .nav{
-        position: fixed;
-        background-color: black;
-        width: 30%;
-        top: 80px;
-        width: 100%;
-        left: 0;
-        bottom: 0;
-        display: flex;
-        justify-content: space-around;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        left: -100%;
-        transition: all 0.8s;
-    }
-
-    .nav ul{
-        flex-direction: column;
-        position: fixed;
-    }
-
-    .nav ul li{
-        line-height: 50px;
-    }
-
-    .nav ul li a{
-        font-size: 20px;
-    }
-
-    #menu-button:checked ~ nav{
-        left: 0
-    }
-
-}
+/*# sourceMappingURL=estilo.css.map */
