@@ -67,18 +67,18 @@
     <div class="row formulario1" style="background-color: #000000;">
 
         <div class="form col-md-6" data-aos="zoom-in">
-            <form action="enviar.php" method="post" enctype="text/plain">
+            <form action="../enviar.php" method="post" enctype="text/plain">
                 <label for="nombre" class="form__label">Nombre</label><br>
                 <input type="text" name="nombre" required class="form__input">
                 <br>
-                <label for="" class="form__label">Apellido</label><br>
-                <input type="text" required class="form__input">
+                <label for="apellido" class="form__label">Apellido</label><br>
+                <input type="text" name="apellido" required class="form__input">
                 <br>
                 <label for="correo" class="form__label">Correo</label><br>
-                <input type="text" required class="form__input">
+                <input type="text" name="correo" required class="form__input">
                 <br>
                 <label for="mensaje" class="form__label">Mensaje</label><br>
-                <textarea name="areatexto" id="" cols="30" rows="5" class="form__textarea"></textarea><br>
+                <textarea name="comentarios" id="" cols="30" rows="5" class="form__textarea"></textarea><br>
                 <input type="submit" class="form__input--submit">
         </form>
         </div>
