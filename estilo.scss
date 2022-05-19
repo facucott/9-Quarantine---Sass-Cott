@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Varta:wght@400;700&display=swap');
 
+@import "_header";
+
+@import "_footer";
+
 // VARIABLE: FUENTE
 
 $font: 'Varta', sans-serif;
@@ -40,8 +44,6 @@ body{
 ::-webkit-scrollbar-thumb{
     @include scrollbar($color3, 100% , solid 2px $color1)
 }
-
-@import "_header";
 
 // CARROUSEL
 
@@ -126,8 +128,6 @@ body{
         &:hover{color: $color2}
     }
 }
-
-@import "_footer";
 
 // HISTORIA
 
