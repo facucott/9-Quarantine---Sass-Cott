@@ -1,8 +1,250 @@
 @import url("https://fonts.googleapis.com/css2?family=Varta:wght@400;700&display=swap");
+.header {
+  background-color: black;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  width: 100%;
+  padding: 20px 100px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+      grid-template-areas: "nav nombreBanda";
+}
+
+.header h1 {
+  color: #d4bf97;
+  letter-spacing: 2px;
+  font-size: 25px;
+  font-weight: bolder;
+  margin: auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0 100px 0 0;
+}
+
+.nav {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: nav;
+}
+
+.nav .nav-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav ul li {
+  list-style: none;
+  font-size: large;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #d4bf97;
+}
+
+.nombreBanda {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: nombreBanda;
+}
+
+.dropdown-menu {
+  background-color: black;
+}
+
+.dropdown-menu .dropdown-item:focus, .dropdown-menu .dropdown-item:hover {
+  color: none;
+}
+
+.dropdown-menu .dropdown-item:focus::before, .dropdown-menu .dropdown-item:hover::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background-color: white;
+  -webkit-transition: width 0.3s ease-out;
+  transition: width 0.3s ease-out;
+}
+
+.nav-item a:hover {
+  color: white;
+  background: none;
+  bottom: none;
+}
+
+.fa-solid {
+  color: #d4bf97;
+  background-color: black;
+  text-align: center;
+}
+
+.nav-item a {
+  color: #d4bf97;
+  text-decoration: none;
+  margin: 0 20px 0 20px;
+  text-decoration: none;
+  color: #d4bf97;
+  position: relative;
+}
+
+.nav-item a:hover {
+  color: white;
+}
+
+.nav-item a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background-color: white;
+  -webkit-transition: width 0.3s ease-out;
+  transition: width 0.3s ease-out;
+}
+
+.nav-item a:hover::before {
+  width: 100%;
+}
+
+.nav-item li ul li a::before {
+  height: 0px;
+}
+
+.navbar ul li a.linkActive {
+  color: white;
+}
+
+#menu-button {
+  display: none;
+}
+
+.check {
+  display: none;
+}
+
+header label {
+  padding: 15px;
+  width: 30px;
+  color: #d4bf97;
+}
+
+header label:hover {
+  cursor: pointer;
+}
+
+.modal-content {
+  border: solid 1px #d4bf97;
+}
+
+.boton-ticket {
+  border: none;
+  text-decoration: none;
+}
+
+.boton-ticket i:hover {
+  color: white;
+}
+
+.fa-ticket {
+  font-size: 30px;
+}
+
+.btn:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.boton-modal {
+  background-color: black;
+  border: 1px solid #d4bf97;
+  padding: 10px;
+}
+
+.boton-modal a {
+  text-decoration: none;
+  color: #d4bf97;
+}
+
+.boton-modal a:hover {
+  color: black;
+}
+
+.boton-modal:hover {
+  background-color: #d4bf97;
+  color: black;
+}
+
+.modal-body {
+  text-align: center;
+  padding: 20px 0 0 0;
+}
+
+.footer {
+  padding: 30px 0 20px 0;
+}
+
+.footer-logos {
+  text-align: center;
+  margin: 5px 0 10px 0;
+}
+
+.footer-logos i {
+  margin: 0 30px;
+  font-size: 30px;
+  color: black;
+}
+
+.footer-copyright {
+  color: black;
+  text-align: center;
+  margin: 10px 0 10px 0;
+}
+
+.float-right {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.float-right a {
+  text-decoration: none;
+  color: black;
+}
+
+.float-right a:hover {
+  color: white;
+}
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: "Varta", sans-serif;
 }
 
@@ -28,152 +270,10 @@ body {
   border: solid 2px black;
 }
 
-.header {
-  background-color: black;
-  display: grid;
-  justify-content: space-between;
-  flex-direction: row-reverse;
-  width: 100%;
-  padding: 20px 100px;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  grid-template-areas: "nav nombreBanda";
-}
-.header h1 {
-  color: #d4bf97;
-  letter-spacing: 2px;
-  font-size: 25px;
-  font-weight: bolder;
-  margin: auto 0;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 100px 0 0;
-}
-
-.nav {
-  grid-area: nav;
-}
-.nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin: 1rem;
-  align-items: center;
-}
-.nav ul li {
-  list-style: none;
-  font-size: large;
-  font-weight: 600;
-  font-size: 20px;
-}
-.nav ul li a {
-  text-decoration: none;
-  color: #d4bf97;
-}
-
-.nombreBanda {
-  grid-area: nombreBanda;
-}
-
-.fa-solid {
-  color: #d4bf97;
-  background-color: black;
-  text-align: center;
-}
-
-.nav-item a {
-  color: #d4bf97;
-  text-decoration: none;
-  margin: 0 20px 0 20px;
-  text-decoration: none;
-  color: #d4bf97;
-  position: relative;
-}
-.nav-item a:hover {
-  color: white;
-}
-.nav-item a::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 3px;
-  background-color: white;
-  transition: width 0.3s ease-out;
-}
-.nav-item a:hover::before {
-  width: 100%;
-}
-
-.navbar ul li a.linkActive {
-  color: white;
-}
-
-#menu-button {
-  display: none;
-}
-
-.check {
-  display: none;
-}
-
-header label {
-  padding: 15px;
-  width: 30px;
-  color: #d4bf97;
-}
-header label:hover {
-  cursor: pointer;
-}
-
-.modal-content {
-  border: solid 1px #d4bf97;
-}
-
-.boton-ticket {
-  border: none;
-  text-decoration: none;
-}
-.boton-ticket i:hover {
-  color: white;
-}
-
-.fa-ticket {
-  font-size: 30px;
-}
-
-.btn:focus {
-  outline: none;
-  box-shadow: none;
-}
-
-.boton-modal {
-  background-color: black;
-  border: 1px solid #d4bf97;
-  padding: 10px;
-}
-.boton-modal a {
-  text-decoration: none;
-  color: #d4bf97;
-}
-.boton-modal a:hover {
-  color: black;
-}
-.boton-modal:hover {
-  background-color: #d4bf97;
-  color: black;
-}
-
-.modal-body {
-  text-align: center;
-  padding: 20px 0 0 0;
-}
-
 .carousel-item {
   padding: 50px 100px 80px 100px;
 }
+
 .carousel-item img {
   border-radius: 50px;
 }
@@ -191,6 +291,7 @@ header label:hover {
 .portada {
   padding: 50px;
 }
+
 .portada img {
   border-radius: 10px;
 }
@@ -200,6 +301,7 @@ header label:hover {
   margin: 70px auto;
   padding: 0 50px;
 }
+
 .disco img:hover {
   border: solid white 2px;
 }
@@ -213,12 +315,15 @@ header label:hover {
 .btn a {
   text-decoration: none;
 }
+
 .btn a h4 {
   padding: 5px 0 0 0;
 }
+
 .btn a h4:hover {
   color: #d4bf97;
 }
+
 .btn:hover {
   background-color: black;
 }
@@ -229,6 +334,7 @@ header label:hover {
   padding: 10px;
   border: 1px solid black;
 }
+
 .boton-escuchar a:hover, .boton-subir a:hover {
   background-color: black;
   color: #d4bf97;
@@ -243,43 +349,13 @@ header label:hover {
   padding: 70px 50px 0 50px;
   text-align: center;
 }
+
 .video2 a {
   color: #d4bf97;
   text-decoration: none;
 }
+
 .video2 a:hover {
-  color: white;
-}
-
-.footer {
-  padding: 30px 0 20px 0;
-}
-
-.footer-logos {
-  text-align: center;
-  margin: 5px 0 10px 0;
-}
-.footer-logos i {
-  margin: 0 30px;
-  font-size: 30px;
-  color: black;
-}
-
-.footer-copyright {
-  color: black;
-  text-align: center;
-  margin: 10px 0 10px 0;
-}
-
-.float-right {
-  text-align: center;
-  padding: 10px 0;
-}
-.float-right a {
-  text-decoration: none;
-  color: black;
-}
-.float-right a:hover {
   color: white;
 }
 
@@ -287,6 +363,7 @@ header label:hover {
   padding: 50px;
   color: #d4bf97;
 }
+
 .historia h3 {
   border-bottom: #d4bf97 solid 2px;
 }
@@ -308,28 +385,39 @@ header label:hover {
 }
 
 .galeria-disco {
+  -webkit-transition: all 400ms;
   transition: all 400ms;
   padding: 20px 0 30px 0;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .galeria-disco img {
   max-width: 300px;
 }
+
 .galeria-disco img:hover {
   border: solid 2px black;
 }
 
 .galeria-imagenes {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .galeria-imagenes img {
   max-width: 320px;
   margin: 10px;
   padding: 10px;
+  -webkit-transition: all 400ms;
   transition: all 400ms;
 }
+
 .galeria-imagenes img:hover {
-  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .galeria-img {
@@ -350,6 +438,7 @@ header label:hover {
   color: #d4bf97;
   text-decoration: none;
 }
+
 .fechas-2021-eter a:hover, .fechas-2022-dama a:hover {
   text-decoration: none;
   color: white;
@@ -358,20 +447,30 @@ header label:hover {
 .formulario1 {
   color: #d4bf97;
   text-align: center;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0 0 30px 0;
 }
 
 .form {
   padding: 40px 0;
   font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   justify-items: center;
   text-align: center;
-  align-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .form__label {
@@ -387,14 +486,15 @@ header label:hover {
   border-bottom: 2px solid #d4bf97;
   background-color: black;
   color: white;
-  align-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .form__textarea {
   resize: none;
 }
 
-.form__input:focus, .form__textarea:focus {
+.form__input:focus, .form__textarea:focus, .form__textarea:focus {
   outline: none;
 }
 
@@ -405,7 +505,9 @@ header label:hover {
   font-size: 20px;
   padding: 10px;
   width: 300px;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 30px;
   margin: 10px;
   cursor: pointer;
@@ -419,8 +521,9 @@ header label:hover {
 @media only screen and (max-width: 1224px) {
   .header {
     padding: 10px 20px;
+    display: -ms-grid;
     display: grid;
-    grid-template-areas: "label nombreBanda";
+        grid-template-areas: "label nombreBanda";
   }
   .header h1 {
     padding-top: 4px;
@@ -429,23 +532,24 @@ header label:hover {
   .header label {
     margin: 10px;
   }
-
   label {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
     grid-area: label;
   }
-
   .nombreBanda {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
     grid-area: nombreBanda;
   }
-
   #menu-button:checked ~ ul {
     right: 0;
   }
-
   .check {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
-
   .nav {
     position: fixed;
     background-color: black;
@@ -453,16 +557,28 @@ header label:hover {
     width: 50%;
     left: 0;
     bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     text-align: center;
     left: -100%;
+    -webkit-transition: all 0.8s;
     transition: all 0.8s;
   }
   .nav ul {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     position: fixed;
   }
   .nav ul li {
@@ -471,10 +587,8 @@ header label:hover {
   .nav ul li a {
     font-size: 20px;
   }
-
   #menu-button:checked ~ nav {
     left: 0;
   }
 }
-
 /*# sourceMappingURL=estilo.css.map */
